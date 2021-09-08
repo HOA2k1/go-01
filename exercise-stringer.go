@@ -21,7 +21,7 @@ func main() {
 	}
 
 
-	
+
 	for name, ip := range hosts {
 		fmt.Printf("%v: %v\n", name, ip)
 	}

@@ -3,15 +3,15 @@ package main
 import "golang.org/x/tour/pic"
 
 func Pic(dx, dy int) [][]uint8 {
-		ss := make([][]uint8, dy)
-		for y := 0; y < dy; y++ {
-			s := make([]uint8, dx)
-			for x := 0; x < dx; x++ {
-				s[x] = uint8((x + y) / 2)
-			}
-			ss[y] = s
+	var img [][]uint8
+	for i := 0; i < dy; i ++ {
+		row := make([]uint8, dx)
+		for j := 0; j < dx; j ++ {
+			row[j] = uint8(i*j)
 		}
-		return ss
+		img = append(img, row)
+	}
+	return img
 }
 
 func main() {
