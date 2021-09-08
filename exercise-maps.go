@@ -6,8 +6,8 @@ import (
 )
 
 func WordCount(s string) map[string]int {
-	wordMap := map[string]int{"x": 1}
-	//tách chuỗi
+	wordMap := map[string]int{}
+	// tách chuỗi
 	words := strings.Fields(s)
 	// lặp các phần tử
 	for _, value := range words {
